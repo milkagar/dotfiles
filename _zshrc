@@ -1,0 +1,9 @@
+# Vimライクなキーバインドを有効にする
+bindkey -e
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+##重複タブを登録しない
+typeset -U path cdpath fpath manpath
+
+## pathを設定
+p=$PATH;PATH=;/usr/libexec/path_helper -s >> ~/.zprofile;PATH=$p
